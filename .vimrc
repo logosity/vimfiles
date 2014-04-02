@@ -170,3 +170,8 @@ endfunction
 
 let vimclojure#ParenRainbow=1
 let vimclojure#HighlightBuiltins=1
+
+if filereadable(expand("~/.vimrc_local"))
+  source ~/.vimrc_local
+endif
+
