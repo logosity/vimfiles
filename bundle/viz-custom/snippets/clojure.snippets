@@ -1,0 +1,27 @@
+snippet it
+	(it "${1:should-do-things}"
+	  (${2}))
+
+snippet des
+	(describe "${1:a-thing}"
+	  (it "${2:should-do-things}"
+	    (${3})))
+
+snippet aro
+	(around [it]
+	  (${1:it}))
+
+snippet bef
+	(before 
+	  (${1}))
+
+snippet withr
+	(with-redefs [${1:name} ${2:value}]
+	  (${3}))
+
+snippet shoi
+	(should-invoke ${1:fn} {:with [${2:arg}] ${3:return :nil}}
+	  (${4}))
+
+snippet w->
+	(when-> ${1:@stub} (.${2:fn}) (.thenReturn ${3:value}))
