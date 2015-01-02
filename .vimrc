@@ -168,6 +168,9 @@ function! <SID>ReformatAndClean()
   call cursor(l, c)  
 endfunction
 
+" Trim trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 let vimclojure#ParenRainbow=1
 let vimclojure#HighlightBuiltins=1
 
