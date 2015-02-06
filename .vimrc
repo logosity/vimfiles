@@ -17,10 +17,10 @@ set nocompatible
 set hidden
 
 " enable per-directory .vimrc files
-set exrc            
+set exrc
 
 " disable unsafe commands in local .vimrc files
-set secure          
+set secure
 
 " Set the path
 set path=.,,**
@@ -42,7 +42,7 @@ runtime macros/matchit.vim
 
 " no goofy buttons
 set guioptions=aci
-:color blackboard  
+:color blackboard
 set history=10000
 
 " Better tab settings
@@ -65,7 +65,7 @@ set autowrite
 set ignorecase
 set smartcase
 
-" Have to do this after loading pathogen, because ubuntu 
+" Have to do this after loading pathogen, because ubuntu
 " turns on filetype detection by default, and for
 " pathogen to pick up the types properly, you have to turn
 " filetype on _after_ loading pathogen
@@ -110,7 +110,7 @@ set statusline=%F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [Type=%y]\
 set laststatus=2
 
 " vimClojure config
-let vimclojure#HighlightBuiltins=1 
+let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
 " map %% to expand to the current file's directory
@@ -157,19 +157,16 @@ function! <SID>ReformatAndClean()
   let c = col(".")
 
   "Replace tabs with spaces
-  :1,$retab 
+  :1,$retab
   "Removing Trailing whitespace
-  %s/\s\+$//e 
+  %s/\s\+$//e
   "Reindent the file
-  :normal gg=G 
+  :normal gg=G
 
   " Clean up: restore previous search history, and cursor position
   let @/=_s
-  call cursor(l, c)  
+  call cursor(l, c)
 endfunction
-
-" Trim trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
 
 let vimclojure#ParenRainbow=1
 let vimclojure#HighlightBuiltins=1
