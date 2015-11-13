@@ -217,7 +217,8 @@ function! Alternate()
   endif
 endfunction
 
-nnoremap <Leader>t :only<CR>:vsp `=Alternate()`<CR>
+nnoremap <Leader>t :only<CR>:vsp `=Alternate()`<CR><C-w>w<CR>
+set splitright
 
 let vimclojure#ParenRainbow=1
 let vimclojure#HighlightBuiltins=1
