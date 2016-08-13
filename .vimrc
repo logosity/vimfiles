@@ -228,3 +228,6 @@ if filereadable(expand("~/.vimrc_local"))
 endif
 
 set exrc
+
+let g:slime_target = "tmux"
+
