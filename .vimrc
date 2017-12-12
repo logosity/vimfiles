@@ -6,6 +6,8 @@ call pathogen#helptags()
 let g:ctrlp_extensions = ['tag']
 nmap <silent> <C-l> :CtrlPTag<CR>
 
+let g:ctrlp_cmd='CtrlP :pwd'
+
 " Remap Ctrl-j to: Save All; Return to normal mode
 imap <silent> <C-j> <Esc>:wa<CR>
 nmap <silent> <C-j> <Esc>:wa<CR>
@@ -23,7 +25,7 @@ set exrc
 set secure
 
 " Set the path
-set path=.,,**
+set path+=.,,**
 
 " Fonty goodness
 set guifont=bitstream\ vera\ sans\ mono\ 10
@@ -227,7 +229,42 @@ if filereadable(expand("~/.vimrc_local"))
   source ~/.vimrc_local
 endif
 
-set exrc
-
 let g:slime_target = "tmux"
 
+"vim-go stuff
+let g:go_fmt_command = "goimports"
+let g:go_bin_path = "usr/lib/go-1.9"
+
+let g:vim_markdown_folding_disabled=1
+let g:slime_target = "tmux"
+
+set statusline=[%{fnamemodify(getcwd(),':t')}]\ %F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [Type=%y]
+
+let g:ctrlp_root_markers = ['.version'] 
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ --ignore "**/node_modules/*"
+      \ -g ""'
+endif
+
+function! AlternateForClojure(file)
+  if match(a:file, 'test') != -1
+    let alt = substitute(a:file, '_test\.clj$', '.clj', '')
+    let alt = substitute(alt, 'test/', 'src/', '')
+    return alt
+  else
+    let alt = substitute(a:file, '.clj$', '_test.clj', '')
+    let alt = substitute(alt, 'src/', 'test/', '')
+    return alt
+  endif
+endfunction
+
+set backupcopy=yes
+set backupdir=~/.vim-backup

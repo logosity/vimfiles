@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# Our Plugins, installed in the pathogen ./bundle directory
+# add tmp dir
+mkdir ~/.vim-tmp
+
+# add backup dir
+mkdir ~/.vim-backup
+
+# Plugins are installed in the pathogen ./bundle directory
 cd ~/.vim/bundle
 
 # CTRL-P and its dependencies
@@ -42,8 +48,15 @@ git clone https://github.com/pangloss/vim-javascript.git
 # Clojure plugin
 git clone https://github.com/vim-scripts/VimClojure.git
 
+# golang support
+
+git clone https://github.com/fatih/vim-go.git
 # Git commands from vim using :Gxxx
 git clone https://github.com/tpope/vim-fugitive.git
 
 # Add vim slime
 git clone git://github.com/jpalardy/vim-slime.git
+
+# Add tabline (numbered tabs)
+git clone git://github.com/mkitt/tabline.vim.git
+
