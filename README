@@ -60,3 +60,6 @@ git clone git://github.com/jpalardy/vim-slime.git
 # Add tabline (numbered tabs)
 git clone git://github.com/mkitt/tabline.vim.git
 
+# add Syntastic
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
