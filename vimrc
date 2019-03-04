@@ -58,3 +58,4 @@ au BufRead,BufNewFile *html.eco set filetype=html
 " Even though this is in specky, if we don't do it here it doesn't take
 au BufRead,BufNewFile *_spec.rb set filetype=rspec
 
+let g:syntastic_python_checkers = []
