@@ -63,3 +63,5 @@ git clone git://github.com/mkitt/tabline.vim.git
 # add Syntastic
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
+# add (a lot) more colors
+git clone https://github.com/flazz/vim-colorschemes.git

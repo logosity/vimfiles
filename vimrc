@@ -40,7 +40,8 @@ set laststatus=2
 " Load matchit
 runtime macros/matchit.vim
 
-:color blackboard
+colorscheme gruvbox
+set background=dark
 
 " Have to do this after loading pathogen, because ubuntu
 " turns on filetype detection by default, and for
