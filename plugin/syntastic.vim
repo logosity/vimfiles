@@ -11,3 +11,6 @@ let g:syntastic_html_checkers = ['validator']
 let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 
 let g:syntastic_html_checkers = ['w3']
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
+noremap <C-w>e :SyntasticCheck<CR>
+noremap <C-w>f :SyntasticToggleMode<CR>

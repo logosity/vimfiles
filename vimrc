@@ -1,3 +1,7 @@
+" set current working direct to last directory visited in shell
+" (see .bashrc for PROMPT_COMMAND that sets ~/.cwd)
+exe 'cd' readfile($HOME . '/.cwd')[0]
+
 " Load Pathogen
 call pathogen#incubate()
 call pathogen#helptags()
@@ -40,8 +44,8 @@ set laststatus=2
 " Load matchit
 runtime macros/matchit.vim
 
-colorscheme gruvbox
-set background=dark
+colorscheme blackboard
+"set background=dark
 
 " Have to do this after loading pathogen, because ubuntu
 " turns on filetype detection by default, and for
@@ -58,5 +62,4 @@ syntax sync fromstart
 au BufRead,BufNewFile *html.eco set filetype=html
 " Even though this is in specky, if we don't do it here it doesn't take
 au BufRead,BufNewFile *_spec.rb set filetype=rspec
-
 let g:syntastic_python_checkers = []
