@@ -9,59 +9,29 @@ mkdir ~/.vim-backup
 # Plugins are installed in the pathogen ./bundle directory
 cd ~/.vim/bundle
 
-# CTRL-P and its dependencies
-git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
-
-# ack is a grep alternative. There's a vim plugin.
-git clone https://github.com/mileszs/ack.vim.git
-
-# Create HTML using css expressions
-git clone https://github.com/tristen/vim-sparkup.git
-
-# Snippets, highlighting and file type detection for RSpec
-git clone https://github.com/vim-scripts/Specky.git
-
-# Clojure repl goodness
-git clone git://github.com/tpope/vim-projectionist.git
-git clone git://github.com/tpope/vim-dispatch.git
-git clone git://github.com/tpope/vim-leiningen.git
-git clone git://github.com/tpope/vim-fireplace.git
-
 # Snippets for many languages (hit tab)
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/tomtom/tlib_vim.git
 git clone https://github.com/garbas/vim-snipmate.git
-git clone https://github.com/honza/vim-snippets.git # Has the actual snippet files
+git clone https://github.com/vim-scripts/Specky.git            # Rspec
+git clone https://github.com/honza/vim-snippets.git            # Has the actual snippet files
 
-# Automatically add block endings for ruby
-git clone https://github.com/tpope/vim-endwise.git
+git clone git://github.com/jpalardy/vim-slime.git              # slime support (send text to external apps)
+git clone git://github.com/mkitt/tabline.vim.git               # Numbered tabs
+git clone git://github.com/neo4j-contrib/cypher-vim-syntax.git
+git clone git://github.com/ntpeters/vim-better-whitespace.git  # Automatically remove whitespace from files
+git clone git@github.com:djoshea/vim-autoread.git
+git clone git@github.com:elzr/vim-json.git
+git clone git@github.com:logosity/vimfiles.git
 
-# Easily change parenthesis, brackets, quotes, etc...
-#git clone git://github.com/tpope/vim-surround.git
-
-# An older version is included with vim. We want the newest.
-git clone https://github.com/vim-ruby/vim-ruby.git
-
-# Vim has basic JavaScript support, but this might be better
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git  # CTRL-P and its dependencies
+git clone https://github.com/flazz/vim-colorschemes.git        # add (a lot) more colors
+git clone https://github.com/hashivim/vim-terraform.git
+git clone https://github.com/kyuhi/vim-emoji-complete
 git clone https://github.com/pangloss/vim-javascript.git
-
-# Clojure plugin
+git clone https://github.com/plasticboy/vim-markdown.git
+git clone https://github.com/tpope/vim-endwise.git             # Automatically add block endings for ruby
+git clone https://github.com/tristen/vim-sparkup.git           # Create HTML using css expressions
+git clone https://github.com/vim-ruby/vim-ruby.git             # get latest version
 git clone https://github.com/vim-scripts/VimClojure.git
-
-# golang support
-
-git clone https://github.com/fatih/vim-go.git
-# Git commands from vim using :Gxxx
-git clone https://github.com/tpope/vim-fugitive.git
-
-# Add vim slime
-git clone git://github.com/jpalardy/vim-slime.git
-
-# Add tabline (numbered tabs)
-git clone git://github.com/mkitt/tabline.vim.git
-
-# add Syntastic
-git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-
-# add (a lot) more colors
-git clone https://github.com/flazz/vim-colorschemes.git
+git clone https://github.com/vim-syntastic/syntastic.git       # syntax error checking
