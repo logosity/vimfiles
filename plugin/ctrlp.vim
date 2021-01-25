@@ -19,3 +19,4 @@ if executable('ag')
       \ -g ""'
 endif
 
+let g:ctrlp_working_path_mode = 'ra'
