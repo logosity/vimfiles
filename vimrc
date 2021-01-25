@@ -3,7 +3,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 
 set secure
-set guifont=Inconsolata\ Regular:h18
+set guifont=Inconsolata\ Medium\ 16
 set backupcopy=yes
 set backupdir=~/.vim-backup,~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
